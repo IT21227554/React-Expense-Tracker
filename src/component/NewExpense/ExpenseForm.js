@@ -2,10 +2,6 @@ import "./ExpenseForm.css";
 import { useState } from "react";
 
 const ExpenseForm = (props) => {
-  //   const [title, setEnteredTitle] = useState("");
-  //   const [amount, setEnteredAmount] = useState("");
-  //   const [date, setEnteredDate] = useState("");
-
   const [userInput, setUserInput] = useState({
     title: "",
     amount: "",
@@ -80,6 +76,9 @@ const ExpenseForm = (props) => {
         </div>
       </div>
       <div className='new-expense__actions'>
+        <button type='button' onClick={props.onStop}>
+          Cancel
+        </button>
         <button type='submit'>Add Expense</button>
       </div>
     </form>
